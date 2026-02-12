@@ -1,0 +1,66 @@
+:root {
+    --brown-light: rgb(243, 163, 66);
+    --brown-main: rgb(154, 98, 29);
+    --brown-dark: rgb(75, 51, 21);
+    --brown-border: rgb(131, 86, 38);
+    --stroke: rgb(95, 67, 51);
+}
+
+button { cursor: pointer; }
+h1 { text-align: center; }
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.length-picker {
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    padding: 20px 40px 0;
+    font-family: Tektur, sans-serif;
+    background: linear-gradient(to right, var(--brown-light), var(--brown-dark));
+    border: 7px solid var(--brown-border);
+    border-radius: 5%;
+    animation: fadeIn 1s ease-in-out;
+}
+
+#length-picker-button {
+    margin-bottom: 30px;
+    padding: 10px;
+    color: white;
+    background: var(--brown-main);
+    border: 2px solid rgb(78, 40, 0);
+    border-radius: 10%;
+    transition: background 0.3s;
+}
+
+#length-picker-button:hover {
+    background: var(--brown-dark);
+}
+
+#value,
+#reveal,
+#password {
+    color: aliceblue;
+    -webkit-text-stroke: 1px var(--stroke);
+}
+
+#value { -webkit-text-stroke: 2px var(--stroke); }
+#reveal { margin-top: 10px; }
+#password { margin: 0px 0px 20px; }
+
+#title {
+    color: rgb(124, 72, 34);
+    font-family: "Bitcount Single", Arial;
+    animation: fadeIn 1s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
